@@ -40,7 +40,9 @@ def compute(x, y):
     product_a = feature[x]
     product_b = feature[y]
     print('people who bought {0} also bought {1}'.format(product_a, product_b))
-    print('the support value is %d, and confidence is %.3f' % (support[(x, y)], confidence[(x, y)]))
+    print('the support value is %d, and confidence value is %.3f' % (support[(x, y)], confidence[(x, y)]))
+
+# 两种格式化方式，f表示浮点数，3表示小数点后3位
 
 
 for a in range(0, 5):
@@ -50,5 +52,18 @@ for a in range(0, 5):
         else:
             continue
 
+list_a = []
+for k, v in support.items():
+    tu = (v, k)
+    list_a.append(tu)
 
+for k, v in sorted(list_a, reverse=True):
+    print(v, k)
 
+list_b = []
+for k, v in confidence.items():
+    tv = (v, k)
+    list_b.append(tv)
+
+for k, v in sorted(list_b, reverse=True):
+    print(v, k)
