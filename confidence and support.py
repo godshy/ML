@@ -1,5 +1,4 @@
 # 计算买了A产品再买B产品的概率，即支持度和置信度，再计算发生的概率。
-
 import numpy
 from collections import defaultdict
 
