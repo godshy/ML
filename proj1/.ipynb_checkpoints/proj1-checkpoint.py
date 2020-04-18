@@ -9,7 +9,7 @@ import matplotlib.pyplot  as plt
 import math
 import numpy.matlib
 np.random.seed(0)
-N = np.matlib.randn(10000, 1)    #标本值
+N = np.matlib.randn(10000, 1)
 
 
 def normfun(x, miu, delta):
@@ -21,7 +21,7 @@ miu = 0
 delta = 1
 X = np.arange(-3, 3, 0.1)
 Y = normfun(X, miu, delta)
-plt.plot(X, Y)
-plt.hist(N, bins = 6, color = 'g', rwidth = 0.9, density = True) #normed为density
+plt.plot(X, Y, color = 'g')
+plt.hist(N, bins = 6, color = 'b', rwidth = 0.9, density = True) #normed为density
 plt.xlabel('random value')
 plt.ylabel('pdf')

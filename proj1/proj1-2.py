@@ -1,15 +1,14 @@
 
-#生成正态分布函数的图表
-#標本値から確率密度関数を求める
-#正态分布中x取a-b之间概率有多大？
-#就是ab之间曲线与x轴围成曲边梯形的面积
+#计算累积分布函数
+#累积分布函数是概率密度函数的积分，表示随机变量X的概率分布
+#小于随机变量某个值概率的和
 
 import numpy as np
 import matplotlib.pyplot  as plt 
 import math
 import numpy.matlib
 np.random.seed(0)
-N = np.matlib.randn(10000, 1)    #标本值
+N = np.matlib.randn(10000, 1)
 
 
 def normfun(x, miu, delta):
@@ -21,7 +20,9 @@ miu = 0
 delta = 1
 X = np.arange(-3, 3, 0.1)
 Y = normfun(X, miu, delta)
-plt.plot(X, Y)
+Cy = np.cumsum(Y*0.1)             #求积分操作的原理就是每个小块乘以了Y值
+plt.plot(X, Y)  
+plt.plot(X, Cy, 'r--')          
 plt.hist(N, bins = 6, color = 'g', rwidth = 0.9, density = True) #normed为density
 plt.xlabel('random value')
 plt.ylabel('pdf')
