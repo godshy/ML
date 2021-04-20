@@ -1,5 +1,5 @@
 import numpy as np
-
+import scipy.optimize
 
 def assignUserPostions(Nuser, type, Wx, Wy, Nx, Ny):
     # uniform distribution
@@ -218,6 +218,8 @@ def BisecNonlcon(x, gammad, M, K):
     for m in range(1, m):
         for i in range(1, k):
             cineq[m, 1] += gammad[m, i] * amat[m, i] ** 2 - cvec[m, 1] ** 2
+
+    return cineq
     # ceq = []
 
 
@@ -270,4 +272,47 @@ def makeTXPcontrolD( type, pctype, Beta, C, tau, rhop, rhod, P):
 
         x0 = np.vstack(np.vstack(avec, bvec), cvec)
 
-        #objfunc = x -1.0 * BisecObjFunc(x, Beta, gammad, P, rhod)
+        objfunc =  -1.0 * BisecObjFunc(x0, Beta, gammad, P, rhod)  #  what is @(x)
+        objNonlConst = BisecObjFunc(x0, gammad)
+
+        L = m * k + k ** 2 + m
+        A = np.zeros(k ** 2 - k + 2 * m + m * k, L)
+        B = np.zeros(k ** 2 - k + 2 * m + m * k, 1)
+
+        tmpnum = 0
+
+        for k in range(1, k):
+            for i in range(1, k):
+                if (k != 1):
+                    tmpnum += 1
+                    for m in range(1, m):
+                        A[tmpnum, i + (m - 1) * k] = gammad[m, i] * Beta[m, k]/Beta[m, i]
+                    A[tmpnum, m * k + i + (k - 1) * k] = -1
+                    B[tmpnum, 1] = 0
+
+        for m in range (1, m):
+            A[k ** 2 - k + m, m * k + k ** 2 + m] = 1
+            B[k ** 2 - k + m, 1] = 1
+            A[k ** 2 - k + 2 * m + k + (m - 1) * k, 1] = 0
+            B[k ** 2 - k + m + m, 1] = 0
+
+        for m in range(i, m):
+            for k in range(1, k):
+                A[k ** 2 - k + 2 * m + k + (m - 1) * k, k + (m - 1) * k] = -1
+                B[k ** 2 - k + 2 * m + k + (m - 1) * k, 1] = 0
+
+        xopt = scipy.optimize.fmin(objfunc, x0, A, B, objNonlConst)
+
+        etadvec = np.zeros(m * k, 1)
+        for m in range(1, m):
+            for k in range(1, k):
+                etadvec[k + (m - 1) * k, 1] = xopt[k + (m-1) * k, 1] ** 2
+
+        return vec2mat(etadvec, m, k)
+
+
+
+
+# def optPilotAssignment(P, Q, Beta, C, rhod, etad, rhop):
+
+
