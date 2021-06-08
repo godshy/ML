@@ -1,0 +1,20 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+cov=np.matrix([[1, 0], [0, 3]])
+icov=np.linalg.inv(cov)
+r=np.matrix([[np.cos(np.pi/3), -np.sin(np.pi/3)], [np.sin(np.pi/3), np.cos(np.pi/3)]])
+xx,yy = np.meshgrid(np.linspace(-5,5),np.linspace(-5,5))
+plt.figure()
+plt.axis('equal')
+p=1./(2.*np.pi*np.sqrt(np.linalg.det(cov))) * np.exp(-1./2.*(icov[0,0]*xx*xx+(icov[0,1]+icov[1,0])*xx*yy+icov[1,1]*yy*yy))
+plt.contour(xx,yy,p)
+#plt.savefig('linearnorm-1.eps')
+plt.figure()
+plt.axis('equal')
+cov2=r.T.dot(cov).dot(r)
+icov2=np.linalg.inv(cov2)
+pp=1./(2.*np.pi*np.sqrt(np.linalg.det(cov2))) * np.exp(-1./2.*(icov2[0,0]*xx*xx+(icov2[0,1]+icov2[1,0])*xx*yy+icov2[1,1]*yy*yy))
+plt.contour(xx,yy,pp)
+#plt.savefig('linearnorm-2.eps')
+plt.show()
