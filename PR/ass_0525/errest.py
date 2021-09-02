@@ -34,8 +34,8 @@ def qclass(m1,cov1,m2,cov2,p1,p2,x1,x2):
 # nboot=5, 10, or 20, ...
 
 if 1:
-  dims=np.array([10, 20, 50]) # dimension
-  ns=np.array([300, 1000]) # num samples
+  dims=np.array([10, 20, 25]) # dimension
+  ns=np.array([300, 500]) # num samples
   fts=np.array([0.2, 0.5, 0.8]) # fraction of training for H
   defdim=2; defn=1; defft=1
 
@@ -75,7 +75,7 @@ for (jdim,dim) in enumerate(dims):
           Herrs[jdim,jn,jft,js,exp]=qclass(m1tr,cov1tr,m2tr,cov2tr,p1,p2,x1te,x2te)
         x1=np.concatenate([x1tr,x1te],axis=0)
         x2=np.concatenate([x2tr,x2te],axis=0)
-        print(x1.shape)
+
         m1=np.mean(x1,axis=0)
         m2=np.mean(x2,axis=0)
         cov1=(x1-np.ones([n,1])*m1).T@(x1-np.ones([n,1])*m1)/(n-1)
@@ -83,7 +83,7 @@ for (jdim,dim) in enumerate(dims):
         Rerrs[jdim,jn,js,exp]=qclass(m1,cov1,m2,cov2,p1,p2,x1,x2)
 
 #         (Rerr, Berr)=bootstrap(x1,x2,p1,p2)
-print(Rerrs.shape)
+
 Rmean=np.mean(Rerrs,axis=3)
 Rstd=np.std(Rerrs,axis=3)
 Hmean=np.mean(Herrs,axis=4)

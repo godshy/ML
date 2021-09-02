@@ -24,14 +24,10 @@ def qclass(m1,cov1,m2,cov2,p1,p2,x1,x2):
 
 
 
-def bootstrap(x1, x2, p1, p2,jdim, jn, js, exp, dim, Rerrs, Berrs, Berrs_hat, dims, ns, ss, nexp):
+def bootstrap(x1, x2, p1, p2,jdim, jn, js, exp, dim, Rerrs, Berrs, Berrs_hat):
 
-  nboot = np.array([5, 10, 20, 50])    #  times of sampling
+  nboot = np.array([5, 10])    # 　仮想セットを　B　回生成する。
   Berrs_f = []
-  i = 0
-  j = 0
-  k = 0
-  l = 0
   for i in range(nboot.size):
     b_star = []
     for j in range(nboot[i]):
@@ -41,7 +37,7 @@ def bootstrap(x1, x2, p1, p2,jdim, jn, js, exp, dim, Rerrs, Berrs, Berrs_hat, di
       s_star_x2 = np.zeros([np.size(x2[:, 0]), dim])
       for kk in range(dim):
         for k in range(np.size(x1[:, 0])):
-          s_star_x1[k, kk] = x1[np.random.randint(0, np.size(x1[:, 0])), kk]
+          s_star_x1[k, kk] = x1[np.random.randint(0, np.size(x1[:, 0])), kk]    # x1 x2 それぞれを対し |S|回の復元抽出を行う。
       for ll in range(dim):
         for l in range(np.size(x2[:,0])):
           s_star_x2[l, ll] = x2[np.random.randint(0, np.size(x2[:, 0])), ll]
@@ -54,14 +50,14 @@ def bootstrap(x1, x2, p1, p2,jdim, jn, js, exp, dim, Rerrs, Berrs, Berrs_hat, di
       cov1_x1_stars = (s_star_x1-np.ones([np.size(x1[:, 0]),1])*m_x1_stars).T@(s_star_x1-np.ones([np.size(x1[:, 0]),1])*m_x1_stars )/(np.size(x1[:, 0])-1)
       cov2_x2_stars = (s_star_x2-np.ones([np.size(x2[:, 0]),1])*m_x2_stars).T@(s_star_x2-np.ones([np.size(x2[:, 0]),1])*m_x2_stars )/(np.size(x2[:, 0])-1)
 
-      Berrs[jdim,jn,js,exp] = qclass(m_x1_stars,cov1_x1_stars,m_x2_stars,cov2_x2_stars,p1,p2,x1,x2)
+      Berrs[jdim,jn,js,exp] = qclass(m_x1_stars,cov1_x1_stars,m_x2_stars,cov2_x2_stars,p1,p2,x1,x2)  # S*を学習セット、Sを評価セット、epsilon*をエル
       Berrs_hat[jdim,jn,js,exp] = qclass(m_x1_stars,cov1_x1_stars,m_x2_stars,cov2_x2_stars,p1,p2,s_star_x1, s_star_x2)
-      c = Berrs - Berrs_hat
+      c = Berrs - Berrs_hat  # b* を得る
       b_star.append(c)
      # b_star[] = numpy.concatenate([b_star, c], axis=3)
 
     b_star = np.array(b_star)
-    Berrs_f.append((Rerrs - np.mean(b_star, axis=0)))
+    Berrs_f.append((Rerrs + np.mean(b_star, axis=0)))  # epsilon　を計算する
   return Rerrs, Berrs_f
 
 
@@ -79,12 +75,12 @@ def bootstrap(x1, x2, p1, p2,jdim, jn, js, exp, dim, Rerrs, Berrs, Berrs_hat, di
 # nboot=5, 10, or 20, ...
 
 if 1:
-  dims=np.array([2, 5, 10, 20, 50]) # dimension
-  ns=np.array([300, 500, 1000, 2000, 5000, 10000]) # num samples
+  dims=np.array([10, 20, 25]) # dimension
+  ns=np.array([300, 500]) # num samples
   fts=np.array([0.2, 0.5, 0.8]) # fraction of training for H
-  defdim=4; defn=1; defft=1
+  defdim=2; defn=1; defft=1
 else:
-  dims=np.array([10, 20, 50]) # dimension
+  dims=np.array([10, 20]) # dimension
   ns=np.array([300, 1000]) # num samples
   fts=np.array([0.2, 0.5, 0.8]) # fraction of training for H
   defdim=2; defn=1; defft=1
@@ -127,7 +123,8 @@ for (jdim,dim) in enumerate(dims):
         cov1=(x1-np.ones([n,1])*m1).T@(x1-np.ones([n,1])*m1)/(n-1)
         cov2=(x2-np.ones([n,1])*m2).T@(x2-np.ones([n,1])*m2)/(n-1)
         Rerrs[jdim,jn,js,exp]=qclass(m1,cov1,m2,cov2,p1,p2,x1,x2)
-        (Rerr, Berrs_f)=bootstrap(x1, x2, p1, p2, jdim, jn, js, exp, dim, Rerrs, Berrs, Berrs_hat, dims, ns, ss, nexp)
+        (Rerr, Berrs_f)=bootstrap(x1, x2, p1, p2, jdim, jn,
+                                  js, exp, dim, Rerrs, Berrs, Berrs_hat)
 
 # def bootstrap(x1, x2, p1, p2,jdim, jn, js, exp, dim, Rerrs, Berrs, Berrs_hat):
 Berrs_f = np.array(Berrs_f)
@@ -136,16 +133,19 @@ Rmean=np.mean(Rerrs,axis=3)
 Rstd=np.std(Rerrs,axis=3)
 Hmean=np.mean(Herrs,axis=4)
 Hstd=np.std(Herrs,axis=4)
-Bmean = np.mean(Berrs_f, axis=5)  #
-Bstd = np.std(Berrs_f, axis=5)  #
-nboot = np.array([5, 10, 20, 50]) #
+Bmean = np.mean(Berrs_f, axis=4)  #
+Bstd = np.std(Berrs_f, axis=4)  #
+nboot = np.array([5, 10]) #
 
 plt.figure()
+# plt.errorbar(ss,Rmean[defdim,defn,:],yerr=Rstd[defdim,defn,:],label='R')
 plt.errorbar(ss,Rmean[defdim,defn,:],yerr=Rstd[defdim,defn,:],label='R')
 for (jft,ft) in enumerate(fts):
-  plt.errorbar(ss,Hmean[defdim,defn,jft,:],yerr=Hstd[defdim,defn,jft,:],label='H(%g)' % ft)
+  plt.errorbar(ss,Hmean[defdim,defn,jft,:],
+               yerr=Hstd[defdim,defn,jft,:],label='H(%g)' % ft)
 for (i, j) in enumerate(nboot):
-  plt.errorbar(ss, Bmean[i,0,defdim,defn:], yerr=Bstd[i, 0, defdim, defn, jft],label='nboot(%g)' % j)
+  plt.errorbar(ss, Bmean[i,defdim,defn,:],
+               yerr=Bstd[i,  defdim, defn,:],label='nboot(%g)' % j)
 plt.plot(ss,berrs[:],label='Bayes')
 plt.legend()
 plt.xlabel('off')
@@ -157,7 +157,7 @@ plt.errorbar(dims,Rmean[:,defn,defs],yerr=Rstd[:,defn,defs],label='R')
 for (jft,ft) in enumerate(fts):
   plt.errorbar(dims,Hmean[:,defn,jft,defs],yerr=Hstd[:,defn,jft,defs],label='H(%g)' % ft)
 for (i, j) in enumerate(nboot):
-  plt.errorbar(dims, Bmean[i, 0, :, defn, defs], yerr=Bstd[i, 0, :, defn, defs],label='nboot(%g)' % j)
+  plt.errorbar(dims, Bmean[i,  :, defn, defs], yerr=Bstd[i,  :, defn, defs],label='nboot(%g)' % j)
 plt.plot(dims,berrs[defs]*np.ones(len(dims)),label='Bayes')
 plt.legend()
 plt.xlabel('dim')
@@ -170,7 +170,7 @@ plt.errorbar(ns,Rmean[defdim,:,defs],yerr=Rstd[defdim,:,defs],label='R')
 for (jft,ft) in enumerate(fts):
   plt.errorbar(ns,Hmean[defdim,:,jft,defs],yerr=Hstd[defdim,:,jft,defs],label='H(%g)' % ft)
 for (i, j) in enumerate(nboot):
-  plt.errorbar(ns, Bmean[i, 0, defdim, :, defs], yerr=Bstd[i, 0, defdim, :, defs],label='nboot(%g)' % j)
+  plt.errorbar(ns, Bmean[i,  defdim, :, defs], yerr=Bstd[i,  defdim, :, defs],label='nboot(%g)' % j)
 plt.plot(ns,berrs[defs]*np.ones(len(ns)),label='Bayes')
 plt.legend()
 plt.xlabel('n')
