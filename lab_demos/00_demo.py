@@ -1,5 +1,7 @@
 import deepchem as dc
 import ssl
+from tensorflow.python.client import device_lib
+device_lib.list_local_devices()
 
 ssl._create_default_https_context = ssl._create_unverified_context
 tasks, datasets, transformers = dc.molnet.load_tox21(featurizer='GraphConv')
