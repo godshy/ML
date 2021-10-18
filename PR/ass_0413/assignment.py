@@ -2,7 +2,7 @@ from scipy.io import loadmat
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = loadmat('data2.mat')
+data = loadmat('./ML/PR/ass_0413/data2.mat')
 x = data['x']  # data matrix
 cov1 = data['cov1']  # covariance matrix 1
 cov2 = data['cov2']  # covariance matrix 2
@@ -83,4 +83,4 @@ plt.scatter([Z1[:, 0]], [Z1[:, 1]])
 plt.contour(xx,yy,p11,cmap='hsv')
 plt.contour(xx,yy,p22,cmap='hsv')
 plt.show()
-
+print("END")
