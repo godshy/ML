@@ -1,36 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "RiPP"
-        ],
-        "compounds": [
-            {
-                "compound": "albusnodin"
-            }
-        ],
-        "loci": {
-            "accession": "NZ_CP033071.1",
-            "completeness": "Unknown",
-            "end_coord": 2837273,
-            "start_coord": 2833928
-        },
-        "mibig_accession": "BGC0002006",
-        "minimal": true,
-        "ncbi_tax_id": "1888",
-        "organism_name": "Streptomyces albus",
-        "publications": [
-            "pubmed:29350227"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f2285586d3fb9f44790f7e21b0f862cb20232b5fed00c03f96a45b0a53f31e9
+size 806

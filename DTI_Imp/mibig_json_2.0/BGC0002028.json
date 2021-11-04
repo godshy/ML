@@ -1,36 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Polyketide"
-        ],
-        "compounds": [
-            {
-                "compound": "frigocyclinone"
-            }
-        ],
-        "loci": {
-            "accession": "MK240316.1",
-            "completeness": "Unknown",
-            "end_coord": 34300,
-            "start_coord": 849
-        },
-        "mibig_accession": "BGC0002028",
-        "minimal": true,
-        "ncbi_tax_id": "1911",
-        "organism_name": "Streptomyces griseus",
-        "publications": [
-            "pubmed:31303144"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f62d26a15eba86584684c6bc4e9a9a9fd692754eb47224ed3564d0cf47cdcd59
+size 809

@@ -1,36 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "RiPP"
-        ],
-        "compounds": [
-            {
-                "compound": "curacozole"
-            }
-        ],
-        "loci": {
-            "accession": "NZ_KQ947987.1",
-            "completeness": "Unknown",
-            "end_coord": 246792,
-            "start_coord": 235088
-        },
-        "mibig_accession": "BGC0002013",
-        "minimal": true,
-        "ncbi_tax_id": "146536",
-        "organism_name": "Streptomyces curacoi",
-        "publications": [
-            "pubmed:30310179"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:92a7aeec2396540f256b3a53601c0d4a0960260805d4f1941a68559ea043a2bd
+size 808

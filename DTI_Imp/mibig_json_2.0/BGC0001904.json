@@ -1,36 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Polyketide"
-        ],
-        "compounds": [
-            {
-                "compound": "fluostatin"
-            }
-        ],
-        "loci": {
-            "accession": "KT726162.1",
-            "completeness": "Unknown",
-            "end_coord": 37159,
-            "start_coord": 3057
-        },
-        "mibig_accession": "BGC0001904",
-        "minimal": true,
-        "ncbi_tax_id": "47874",
-        "organism_name": "Micromonospora rosaria",
-        "publications": [
-            "pubmed:26465097"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff57c0a0c06c70066614fe4766a24889c10b18c9cbb9ddeec564d52b1d3ad641
+size 809

@@ -1,27 +1,3 @@
-
-#生成正态分布函数的图表
-#標本値から確率密度関数を求める
-#正态分布中x取a-b之间概率有多大？
-#就是ab之间曲线与x轴围成曲边梯形的面积
-
-import numpy as np
-import matplotlib.pyplot  as plt 
-import math
-import numpy.matlib
-np.random.seed(0)
-N = np.matlib.randn(10000, 1)
-
-
-def normfun(x, miu, delta):
-
-    pdf = np.exp(-((x - miu)**2) / (2* delta**2)) / (delta * np.sqrt( 2 * np.pi))
-    return pdf
-
-miu = 0
-delta = 1
-X = np.arange(-3, 3, 0.1)
-Y = normfun(X, miu, delta)
-plt.plot(X, Y, color = 'g')
-plt.hist(N, bins = 6, color = 'b', rwidth = 0.9, density = True) #normed为density
-plt.xlabel('random value')
-plt.ylabel('pdf')
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c145a6224bf1071172e61bc9152baf21ab3886f8c80c5af0ab0153ffc09682b
+size 677

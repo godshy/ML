@@ -1,10 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SshConfigs">
-    <configs>
-      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="192.168.131.130" id="a5728f27-7345-40b2-bb73-ce680665c829" port="22" customName="192.168.131.130" nameFormat="CUSTOM" username="root">
-        <option name="customName" value="192.168.131.130" />
-      </sshConfig>
-    </configs>
-  </component>
-</project>
+version https://git-lfs.github.com/spec/v1
+oid sha256:34ea478e35905ac4fa9ef012f299bf53a313be5f769e0bb2df4b23b6fc91089c
+size 462

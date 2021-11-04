@@ -1,34 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "RiPP"
-        ],
-        "compounds": [
-            {
-                "compound": "sphaerocyclamide"
-            }
-        ],
-        "loci": {
-            "accession": "MF140698.1",
-            "completeness": "Unknown"
-        },
-        "mibig_accession": "BGC0001933",
-        "minimal": true,
-        "ncbi_tax_id": "1380707",
-        "organism_name": "Sphaerospermopsis sp. LEGE 00249",
-        "publications": [
-            "pubmed:30266955"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:598eb7407c599cefcb424962af3fda446e0e6a6243bd082969a5db6bad4e3bcf
+size 756

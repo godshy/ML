@@ -1,34 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Terpene"
-        ],
-        "compounds": [
-            {
-                "compound": "tiancilactone"
-            }
-        ],
-        "loci": {
-            "accession": "BK010469.1",
-            "completeness": "Unknown"
-        },
-        "mibig_accession": "BGC0002019",
-        "minimal": true,
-        "ncbi_tax_id": "1703937",
-        "organism_name": "Streptomyces sp. CB03234",
-        "publications": [
-            "pubmed:29806086"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5638f15b7c9d140685427ad5738832eb7d49e779229b1b3296b1c5bccff30bde
+size 748

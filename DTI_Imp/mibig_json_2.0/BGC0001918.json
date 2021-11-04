@@ -1,35 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "NRP",
-            "Polyketide"
-        ],
-        "compounds": [
-            {
-                "compound": "JBIR-06"
-            }
-        ],
-        "loci": {
-            "accession": "LC375135.1",
-            "completeness": "Unknown"
-        },
-        "mibig_accession": "BGC0001918",
-        "minimal": true,
-        "ncbi_tax_id": "1931",
-        "organism_name": "Streptomyces sp.",
-        "publications": [
-            "pubmed:30166552"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:195088bb1f897be4a5ff2715507e10ea2762b66fad4a80b1283ca37ae1255ab1
+size 753

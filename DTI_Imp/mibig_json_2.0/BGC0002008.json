@@ -1,36 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Other"
-        ],
-        "compounds": [
-            {
-                "compound": "aryl polyenes"
-            }
-        ],
-        "loci": {
-            "accession": "NZ_FO704550.1",
-            "completeness": "Unknown",
-            "end_coord": 3671216,
-            "start_coord": 3655966
-        },
-        "mibig_accession": "BGC0002008",
-        "minimal": true,
-        "ncbi_tax_id": "351671",
-        "organism_name": "Xenorhabdus doucetiae",
-        "publications": [
-            "pubmed:30908039"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ee7a0415c43ff644e30cb4a7f2c72a1e17cd5d88cfdc58b94aa62b92bf2a06f1
+size 815

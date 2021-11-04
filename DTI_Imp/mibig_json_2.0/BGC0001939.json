@@ -1,36 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Polyketide"
-        ],
-        "compounds": [
-            {
-                "compound": "streptoseomycin"
-            }
-        ],
-        "loci": {
-            "accession": "MG891745.1",
-            "completeness": "Unknown",
-            "end_coord": 84150,
-            "start_coord": 2281
-        },
-        "mibig_accession": "BGC0001939",
-        "minimal": true,
-        "ncbi_tax_id": "73044",
-        "organism_name": "Streptomyces seoulensis",
-        "publications": [
-            "pubmed:29697266"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec1de15aa4efbae452edcf82e8d24f59c11524f3257e6382f75021af6bea62d4
+size 815

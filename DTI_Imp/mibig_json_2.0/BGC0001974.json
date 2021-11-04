@@ -1,34 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Other"
-        ],
-        "compounds": [
-            {
-                "compound": "kainic acid"
-            }
-        ],
-        "loci": {
-            "accession": "MK312630.1",
-            "completeness": "Unknown"
-        },
-        "mibig_accession": "BGC0001974",
-        "minimal": true,
-        "ncbi_tax_id": "945030",
-        "organism_name": "Digenea simplex",
-        "publications": [
-            "pubmed:30995339"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a9f6fee748f296fd8100b28ab7f9544b69ebf5c3e346dfa52ab08529160dfddf
+size 734

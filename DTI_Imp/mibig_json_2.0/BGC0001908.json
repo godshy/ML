@@ -1,34 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Polyketide"
-        ],
-        "compounds": [
-            {
-                "compound": "sceliphrolactam"
-            }
-        ],
-        "loci": {
-            "accession": "KX230849.1",
-            "completeness": "Unknown"
-        },
-        "mibig_accession": "BGC0001908",
-        "minimal": true,
-        "ncbi_tax_id": "1849710",
-        "organism_name": "Streptomyces sp. SD85",
-        "publications": [
-            "pubmed:29371699"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a77d112eb8f5a66436f6f637c04101898c3dd9b2345dc3f0769f73b7b52f1120
+size 750

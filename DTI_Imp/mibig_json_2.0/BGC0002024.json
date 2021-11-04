@@ -1,34 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Polyketide"
-        ],
-        "compounds": [
-            {
-                "compound": "nargenicin"
-            }
-        ],
-        "loci": {
-            "accession": "MH544245.1",
-            "completeness": "Unknown"
-        },
-        "mibig_accession": "BGC0002024",
-        "minimal": true,
-        "ncbi_tax_id": "1311812",
-        "organism_name": "Nocardia argentinensis",
-        "publications": [
-            "pubmed:30867595"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:643da72e54709f94f591e9e06d2c1f06687d696e5d3d0d282062f2667543053a
+size 746

@@ -1,34 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Polyketide"
-        ],
-        "compounds": [
-            {
-                "compound": "funisamine"
-            }
-        ],
-        "loci": {
-            "accession": "MH128143.1",
-            "completeness": "Unknown"
-        },
-        "mibig_accession": "BGC0001944",
-        "minimal": true,
-        "ncbi_tax_id": "47486",
-        "organism_name": "Streptosporangium sp.",
-        "publications": [
-            "pubmed:30030223"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:debb07e074d3b93e3ad35b72bd6e3168cb0c8807c7741626a4fdab7d0766ba36
+size 743

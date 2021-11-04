@@ -1,10 +1,3 @@
-import sklearn as sl
-from sklearn.datasets import load_iris
-dataset = load_iris() #150x4 while 4 is the feature (sepal length, sepal width, petal length, petal width)
-
-X = dataset.data
-Y = dataset.target #represent for Iris Setosa, Iris Versicolour, Iris Virginica
-
-attribute_means = X.mean(axis = 0) #每个特征的均值， axis=0是一行，1是1列
-print(Y)
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:db37f28371bd72dbc5769c7fcbe4a50886ffc8e0e39f232cdb830d488350d911
+size 364

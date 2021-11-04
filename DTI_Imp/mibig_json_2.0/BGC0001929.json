@@ -1,36 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "RiPP"
-        ],
-        "compounds": [
-            {
-                "compound": "WGK"
-            }
-        ],
-        "loci": {
-            "accession": "LS483343.1",
-            "completeness": "Unknown",
-            "end_coord": 543757,
-            "start_coord": 539080
-        },
-        "mibig_accession": "BGC0001929",
-        "minimal": true,
-        "ncbi_tax_id": "1345",
-        "organism_name": "Streptococcus ferus",
-        "publications": [
-            "pubmed:30398325"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ba75d3f1a4af71737fddcc0298f239337499408b33533beaadd9d778ec2c0f5
+size 795

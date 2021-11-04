@@ -1,36 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Saccharide"
-        ],
-        "compounds": [
-            {
-                "compound": "heteropolysaccharide (HePS)"
-            }
-        ],
-        "loci": {
-            "accession": "CP021932.1",
-            "completeness": "Unknown",
-            "end_coord": 1081260,
-            "start_coord": 1050964
-        },
-        "mibig_accession": "BGC0001894",
-        "minimal": true,
-        "ncbi_tax_id": "1590",
-        "organism_name": "Lactobacillus plantarum",
-        "publications": [
-            "pubmed:30286997"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf032e7c172c8837ee29ae5130b0a18269d739e6ccca4f70dcb39c5afaa00a3d
+size 831

@@ -1,34 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Polyketide"
-        ],
-        "compounds": [
-            {
-                "compound": "violapyrone B"
-            }
-        ],
-        "loci": {
-            "accession": "KU534995.1",
-            "completeness": "Unknown"
-        },
-        "mibig_accession": "BGC0001905",
-        "minimal": true,
-        "ncbi_tax_id": "78355",
-        "organism_name": "Streptomyces somaliensis",
-        "publications": [
-            "pubmed:29650021"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:29240b96ce20db44ae62b8ea56cd5076dcf2217203e144b000ce34c072ba32f0
+size 749

@@ -1,34 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Other"
-        ],
-        "compounds": [
-            {
-                "compound": "purincyclamide"
-            }
-        ],
-        "loci": {
-            "accession": "MN190176.1",
-            "completeness": "Unknown"
-        },
-        "mibig_accession": "BGC0001986",
-        "minimal": true,
-        "ncbi_tax_id": "68185",
-        "organism_name": "Streptomyces chrestomyceticus",
-        "publications": [
-            "doi:10.1021/acs.orglett.9b0246"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d585960e53374d34a1822e4683efd8a8ccc3ce854aedc87be197d06a903c7db
+size 765

@@ -1,34 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Polyketide"
-        ],
-        "compounds": [
-            {
-                "compound": "lavendiol"
-            }
-        ],
-        "loci": {
-            "accession": "LC330869.1",
-            "completeness": "Unknown"
-        },
-        "mibig_accession": "BGC0001916",
-        "minimal": true,
-        "ncbi_tax_id": "1914",
-        "organism_name": "Streptomyces lavendulae",
-        "publications": [
-            "pubmed:29255990"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b869b126b59e5ed5fa426a233c4a2b2f40a99e3c3329e04a44ea445541309add
+size 743

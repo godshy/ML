@@ -1,36 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Polyketide"
-        ],
-        "compounds": [
-            {
-                "compound": "cepacin A"
-            }
-        ],
-        "loci": {
-            "accession": "ABLC01000003.1",
-            "completeness": "Unknown",
-            "end_coord": 54095,
-            "start_coord": 37421
-        },
-        "mibig_accession": "BGC0001897",
-        "minimal": true,
-        "ncbi_tax_id": "396596",
-        "organism_name": "Burkholderia ambifaria IOP40-10",
-        "publications": [
-            "pubmed:30833726"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a579ed64031ed514d7e01b3cbce1ca209056b6d92211632f81a9444bf041309
+size 823

@@ -1,36 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "Polyketide"
-        ],
-        "compounds": [
-            {
-                "compound": "secalonic acids"
-            }
-        ],
-        "loci": {
-            "accession": "CAGA01000032.1",
-            "completeness": "Unknown",
-            "end_coord": 181985,
-            "start_coord": 145282
-        },
-        "mibig_accession": "BGC0001886",
-        "minimal": true,
-        "ncbi_tax_id": "1111077",
-        "organism_name": "Claviceps purpurea 20.1",
-        "publications": [
-            "pubmed:28955461"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e2a2cd0b59cbe34df833ee773213628aaae6d624ab8304f5a2d0f80409811fd4
+size 824

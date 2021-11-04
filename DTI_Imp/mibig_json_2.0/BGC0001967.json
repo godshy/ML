@@ -1,34 +1,3 @@
-{
-    "changelog": [
-        {
-            "comments": [
-                "Submitted"
-            ],
-            "contributors": [
-                "AAAAAAAAAAAAAAAAAAAAAAAA"
-            ],
-            "version": "2.0"
-        }
-    ],
-    "cluster": {
-        "biosyn_class": [
-            "NRP"
-        ],
-        "compounds": [
-            {
-                "compound": "acyldepsipeptide 1"
-            }
-        ],
-        "loci": {
-            "accession": "MK047367.1",
-            "completeness": "Unknown"
-        },
-        "mibig_accession": "BGC0001967",
-        "minimal": true,
-        "ncbi_tax_id": "67305",
-        "organism_name": "Streptomyces hawaiiensis",
-        "publications": [
-            "doi:10.1128/AEM.01292-1"
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:72e04863eacd1971757d1bae0abcfeaecca581ba4733cf821b312a7dbcfe1f53
+size 755
